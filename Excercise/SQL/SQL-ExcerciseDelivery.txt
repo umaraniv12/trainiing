@@ -1,0 +1,40 @@
+Delivery Application:
+----------------------
+Write SQL for the below:
+
+1. Find out the list of service representatives and their location
+Service Rep Location 
+----------- ---------- 
+
+2. Find out the No of representatives available at a given time for a location
+Service Rep Distance to Location 
+----------  --------------------     
+
+3. Find the past delivery orders for a given customer
+
+Customer Ord. Date Ord.Time Service Rep
+-------  --------- -------- -----------
+
+4. Find the current order assignments for all the service Reps
+
+Service Rep Ord. Date Ord.Time Location
+----------- --------- -------- --------
+
+5. Find out the distance covered by each service Rep for a given date
+Service Rep Distance 
+----------- ---------
+6. Find out customers and the total number of orders in decending order
+Customer # of Orders
+-------  -----------
+
+7 Find out the service rep who has covered maximum distance in the last week
+Expected Output:
+Service Rep   Week  Distance
+-----------  ------ --------
+
+8. Find out the customer who has the maximum number of orders
+
+Customer # of orders 
+-------  ------------
+
+

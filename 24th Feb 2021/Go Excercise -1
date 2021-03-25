@@ -1,0 +1,81 @@
+
+1. Covert a float64 value to unint
+    var f float64 = 64.4
+A. var u uint = uint(f)
+B. var u unit = type(unit, f)
+C. var u uint = (unit) f
+D. var u uint = float64.parseUint(f)
+A
+2. Check the type of the argument is []string
+    func timeMap(y interface{}) {
+	z, ok := ???
+	if ok {
+		fmt.println("argument is string array")
+	}
+}
+A. z, ok := type.([]string,y)
+B. z, ok := type.Parse([]string,y)
+C. z, ok := type.Check([]string,y)
+D. z, ok := y.([]string)
+A
+
+3. Write a function to accept any type of arguent and print whether 
+the argument passed is of int32, float64, bool, string or Other
+using switch case
+func(){
+i := interface.type()
+switch i{
+    case int32:
+                fmt.println("its int32")
+   case float64 :
+                fmt.println("float64")
+     case bool:
+                fmt.println("its bool")
+     case string:
+                fmt.println("its string")    
+     default:
+                fmt.println("other")      
+}
+
+}
+
+
+
+
+4. Write a function to any number of integer arguments 
+    and return a median.
+
+5. Write a function to any number of integer arguments 
+    and returns array of strings of binary numbers corresponding to the input.
+
+6. Create an interface contact with below methods
+    func addContact(name string, phone int32, bool isPrimary)
+    func deleteContact(name string, phone int32)
+    func updateContact(name string, phone int32)
+    func getPrimaryContact(name string)
+    func getAllContacts(name string) map[string] int
+
+    Implement a struct Customer with name, phone, isPrimary fields
+    and implement all the methods above
+
+7. write a function to accept an array of strings
+   and sort them in a specified order (asc or desc)
+   Ensure that the original array is modified with sorted results
+
+   func sort (list []string, sortBy string) 
+
+8. Create a struct Location with fields 
+        name
+        longitude
+        latitude
+
+    Create another struct Locations to store a list of Locations
+    Write a member function to get the distance bettween two Locations
+    func (L Locations) distanceBetween(origin string, destination) float64
+
+    Consider distance = (square of (longitude1-longitude2) + square of (latitude1 -latitude2))/1000
+
+
+
+
+

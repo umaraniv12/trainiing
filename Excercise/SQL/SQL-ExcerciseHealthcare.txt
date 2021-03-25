@@ -1,0 +1,55 @@
+Healthcare appoiuntment:
+----------------------
+Write SQL for the below:
+
+1. Find out the list of doctors and speciality
+Doctor Speciality 
+------ ---------- 
+select doctor.d_name, speciality.s_name from doctor join docSpeciality ON doctor.d_id = docSpeciality.d_id join speciality ON speciality.s_id = docSpeciality.s_id
+
+
+2. Find out the No of doctors by speciality
+Speciality # of Doctors 
+------ ---------- 
+select count(*) as c,s.s_name from speciality as s , docSpeciality as d where s.s_id = d.s_id group by s.s_name
+
+
+3. Find the past appointments for a given patient
+
+PatientName App. Date App.Time Doctor
+----------- --------- -------- ------
+
+
+
+4. Find the upcoming appointments for a doctor
+
+PatientName App. Date App.Time Doctor
+----------- --------- -------- ------
+
+5. Find out the list of doctors available for a given timeslot and speciality
+Doctor Speciality Avalible_Date Available_Time
+------ ---------- ------------- --------------
+select d.d_name,s.s_name,t.t_date,t.t_time 
+    from doctor as d,speciality as s,timeSlot as t,docSpeciality as ds,docSlot as dt 
+      where d.d_id=ds.d_id and s.s_id=ds.s_id and d.d_id=dt.d_id and t.ts_id=dt.ts_id and ds.d_id=dt.d_id 
+      and s.s_id=901 and t.ts_id=1001;
+
+
+6. Find out the list of doctors available for a given date and speciality
+Doctor Speciality Avalible_Date Available_Time
+------ ---------- ------------- --------------
+
+
+7. Find out the No. of appointments for a given doctor for a given date
+Expected Output:
+Doctor Speciality No. of appointment
+------ ---------- -------------------
+
+
+8. Find out doctor who has the maximum number of appointments
+
+Doctor # of appoiuntment 
+------ ----------------- 
+select d_name,count(*) as appointments from appointment join doctor on appointment.d_id = doctor.d_id group by appointment.d_id order by count(*) desc limit 1
+
+
